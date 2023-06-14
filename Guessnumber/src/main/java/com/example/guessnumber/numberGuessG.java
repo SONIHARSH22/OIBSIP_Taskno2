@@ -93,6 +93,8 @@ public class numberGuessG extends Application {
 
         if (guessedNumber == randomNumber) {
             showResultMessage("WOW!! You guessed the right number. Congratulations!");
+             disableInput();
+            return;
         } else if (guessedNumber < randomNumber && attempts != maxAttempts) {
             showResultMessage("Number is greater than the guessed number.");
         } else if (guessedNumber > randomNumber && attempts != maxAttempts) {
